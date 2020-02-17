@@ -1,16 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
-    backgroundColor: theme.palette.background.paper,
-    paddingTop: "0px",
-    paddingBottom: "0px"
+    cursor: "pointer"
   },
   inline: {
     display: "inline"
@@ -27,37 +23,35 @@ const VideoListItem = props => {
   const classes = useStyles();
 
   const handleClick = (event, video) => {
-    console.log("click");
+    // console.log(event.currentTarget.textContent);
     props.onVideoSelect(video);
   };
 
   return (
-    <List className={classes.root}>
-      <ListItem
-        alignItems="flex-start"
-        button
-        divider={true}
-        onClick={event => handleClick(event, props.video)}
-      >
-        <img src={imageUrl} className={classes.thumbnail} alt={title} />
-        <ListItemText
-          className={classes.desc}
-          primary={title}
-          secondary={
-            <React.Fragment>
-              <Typography
-                component="span"
-                variant="caption"
-                className={classes.inline}
-                color="textSecondary"
-              >
-                {description}
-              </Typography>
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-    </List>
+    <ListItem
+      className={classes.root}
+      alignItems="flex-start"
+      divider={true}
+      onClick={event => handleClick(event, props.video)}
+    >
+      <img src={imageUrl} className={classes.thumbnail} alt={title} />
+      <ListItemText
+        className={classes.desc}
+        primary={title}
+        secondary={
+          <React.Fragment>
+            <Typography
+              component="span"
+              variant="caption"
+              className={classes.inline}
+              color="textSecondary"
+            >
+              {description}
+            </Typography>
+          </React.Fragment>
+        }
+      />
+    </ListItem>
   );
 };
 

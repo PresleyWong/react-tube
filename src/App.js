@@ -11,6 +11,7 @@ export default class App extends Component {
 
     this.state = {
       videos: [],
+      filteredVideos: [],
       selectedVideo: null
     };
 
@@ -25,12 +26,24 @@ export default class App extends Component {
     });
     this.setState({
       videos: response.data.items,
+      filteredVideos: response.data.items.slice(1),
       selectedVideo: response.data.items[0]
     });
   };
 
-  handleSelect = video => {
-    debugger;
+  handleSelect = selectedVideo => {
+    this.setState({ selectedVideo });
+    this.filteredVideos(selectedVideo);
+  };
+
+  filteredVideos = selectedVideo => {
+    let filteredVideos = this.state.videos;
+    filteredVideos = filteredVideos.filter(video => {
+      return video.snippet.title !== selectedVideo.snippet.title;
+    });
+    this.setState({
+      filteredVideos
+    });
   };
 
   render() {
@@ -42,9 +55,9 @@ export default class App extends Component {
       <React.Fragment>
         <Header onSearch={videoSearch} />
         <Body
-          videos={this.state.videos}
+          videos={this.state.filteredVideos}
           selectedVideo={this.state.selectedVideo}
-          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+          onVideoSelect={this.handleSelect}
         />
         <Footer />
       </React.Fragment>
