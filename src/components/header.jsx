@@ -62,7 +62,7 @@ const Header = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static" color="primary">
+      <AppBar position="sticky" color="primary">
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
             MyTube

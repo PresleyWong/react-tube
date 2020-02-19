@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    position: "fixed",
     bottom: "0",
     right: "45%"
   }
@@ -14,19 +13,21 @@ const useStyles = makeStyles(theme => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Typography
-      variant="body2"
-      color="textSecondary"
-      align="center"
-      className={classes.footer}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Mytube
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
+    <div>
+      <Typography
+        variant="body2"
+        color="textSecondary"
+        align="center"
+        className={classes.footer}
+      >
+        {"Copyright © "}
+        <Link color="inherit" href="https://material-ui.com/">
+          Mytube
+        </Link>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
+    </div>
   );
 };
 

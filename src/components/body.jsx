@@ -5,7 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import VideoList from "../components/videoList";
+import VideoList from "./videoList";
+import Loader from "./loader";
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
@@ -31,7 +32,7 @@ const Body = props => {
   const classes = useStyles();
 
   if (!props.selectedVideo) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   const url = `https://www.youtube.com/embed/${props.selectedVideo.id.videoId}`;
@@ -41,7 +42,7 @@ const Body = props => {
   return (
     <main>
       <Container className={classes.cardGrid} maxWidth="xl">
-        <Grid container spacing={0}>
+        <Grid container spacing={1}>
           <Grid item xs={12} sm={12} md={8}>
             <CardMedia>
               <div className={classes.video}>
