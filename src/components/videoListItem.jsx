@@ -23,7 +23,6 @@ const VideoListItem = props => {
   const classes = useStyles();
 
   const handleClick = (event, video) => {
-    // console.log(event.currentTarget.textContent);
     props.onVideoSelect(video);
   };
 

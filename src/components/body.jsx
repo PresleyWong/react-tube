@@ -17,7 +17,8 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     paddingBottom: "56.25%",
     paddingTop: 25,
-    height: 0
+    height: 0,
+    overflow: "hidden"
   },
   iframe: {
     position: "absolute",
