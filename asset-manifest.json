@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/react-tube/static/js/main.1f360b9a.chunk.js",
-    "main.js.map": "/react-tube/static/js/main.1f360b9a.chunk.js.map",
+    "main.js": "/react-tube/static/js/main.5bf6de65.chunk.js",
+    "main.js.map": "/react-tube/static/js/main.5bf6de65.chunk.js.map",
     "runtime-main.js": "/react-tube/static/js/runtime-main.dc91622e.js",
     "runtime-main.js.map": "/react-tube/static/js/runtime-main.dc91622e.js.map",
-    "static/js/2.fd5caf57.chunk.js": "/react-tube/static/js/2.fd5caf57.chunk.js",
-    "static/js/2.fd5caf57.chunk.js.map": "/react-tube/static/js/2.fd5caf57.chunk.js.map",
+    "static/js/2.38cf91fe.chunk.js": "/react-tube/static/js/2.38cf91fe.chunk.js",
+    "static/js/2.38cf91fe.chunk.js.map": "/react-tube/static/js/2.38cf91fe.chunk.js.map",
     "index.html": "/react-tube/index.html",
-    "precache-manifest.12f0c28532bbe0e7c3c3f5044c3672cc.js": "/react-tube/precache-manifest.12f0c28532bbe0e7c3c3f5044c3672cc.js",
+    "precache-manifest.241754add1baab8edeb7690fcc015b53.js": "/react-tube/precache-manifest.241754add1baab8edeb7690fcc015b53.js",
     "service-worker.js": "/react-tube/service-worker.js",
-    "static/js/2.fd5caf57.chunk.js.LICENSE": "/react-tube/static/js/2.fd5caf57.chunk.js.LICENSE"
+    "static/js/2.38cf91fe.chunk.js.LICENSE": "/react-tube/static/js/2.38cf91fe.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.dc91622e.js",
-    "static/js/2.fd5caf57.chunk.js",
-    "static/js/main.1f360b9a.chunk.js"
+    "static/js/2.38cf91fe.chunk.js",
+    "static/js/main.5bf6de65.chunk.js"
   ]
 }
